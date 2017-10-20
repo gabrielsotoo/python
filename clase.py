@@ -2,7 +2,7 @@ class hola(object):
 	def metodo1(x):
 		arreglo = x
 		j = 0
-		arreglo2 = []
+		arreglo2 = []		#declaro arreglo2 como lista
 		i = len(arreglo) 	#variable i tiene el valor del largo de ese array
 		while(j<len(arreglo)):			#el ciclo ira hasta que j no sea menor que el largo del arreglo
 			i-=1
