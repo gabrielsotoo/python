@@ -20,4 +20,4 @@ class hola(object):
 		return x
 
 print (hola.metodo1(['1','2','2','1']))
-print (hola.metodo2('mi nombre'))
+print (hola.metodo2('mi nombre es Gabriel Soto'))
