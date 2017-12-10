@@ -1,0 +1,1 @@
+define 2 variables: cadena y entero
