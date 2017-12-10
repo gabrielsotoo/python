@@ -20,7 +20,7 @@ t_ignore = r' '
 def t_FLOAT(t):
     #define como se ven los floats: entero seguido de punto y entero
     r'\d+\.\d+'
-    t.valuer = float(t.value)
+    t.value = float(t.value)
     return t
 
 def t_INT(t):

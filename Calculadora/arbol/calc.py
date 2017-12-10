@@ -5,9 +5,12 @@ import sys
 #creacion de una lista de tokens para el lex
 tokens = [
     'INT', 'FLOAT', 'NAME', 'RESTA', 'SUMA',
-    'DIVISION', 'MULTIPLICACION', 'EQUALS'
+    'DIVISION', 'MULTIPLICACION', 'EQUALS','LPAREN','RPAREN'
 ]
 #formato para decirle al lexer, como luce un token de ese tipo
+
+t_LPAREN = r'\('
+t_RPAREN = r'\)'
 t_SUMA = r'\+'
 t_RESTA = r'\-'
 t_MULTIPLICACION = r'\*'
@@ -20,7 +23,7 @@ t_ignore = r' '
 def t_FLOAT(t):
     #define como se ven los floats: entero seguido de punto y entero
     r'\d+\.\d+'
-    t.valuer = float(t.value)
+    t.value = float(t.value)
     return t
 
 def t_INT(t):
@@ -34,7 +37,7 @@ def t_INT(t):
 
 def t_NAME(t):
     #definicion de clases de caracteres a leer en las cadenas
-    r'[a-zA-Z_][a-zA-Z_0-9]*'
+    r'[a-zA-Z_(,)][a-zA-Z_0-9_]*'
     t.type = 'NAME'
     return t
 #creacion de error. se salta un token
@@ -53,9 +56,7 @@ precedence = (
 )
 #******ANALIZADOR LEXICO
 
-#******PARSER
-#creacion de funciones
-#cada funcion crea un ARBOL
+#******PARSER   
 def p_calc(p):
     #definicion de no terminales
     '''
@@ -83,7 +84,11 @@ def p_expression(p):
 #creacion de arbol con el parser; p[0] es la expresion p[2] es el operador
 #p[1 y 3] son valores que son una tupla
     p[0] = (p[2], p[1], p[3])
-
+    
+def p_expression_group(p):
+    'expression : LPAREN expression RPAREN'
+    p[0] = (p[2], p[1], p[3])
+    
 #creacion de funcion de expresion, puede ser int o float y le pasa el valor a p_calc
 def p_expression_int_float(p):
     '''
