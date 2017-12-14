@@ -1,0 +1,20 @@
+missing module named resource - imported by posix, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named posix - imported by os, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named _posixsubprocess - imported by subprocess, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named org - imported by pickle, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named readline - imported by cmd, code, pdb, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named _winreg - imported by platform, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named 'java.lang' - imported by platform, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named termios - imported by tty, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py, getpass
+missing module named grp - imported by shutil, tarfile, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py, netrc, getpass
+missing module named _dummy_threading - imported by dummy_threading, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py
+missing module named 'org.python' - imported by copy, G:\Lenguajes\Portafolio\CLASES\PROYECTO FINAL\Calculadora\full\calc.py, xml.sax
+missing module named cPickle - imported by ply.yacc
+missing module named cStringIO - imported by cPickle
+missing module named copy_reg - imported by cPickle, cStringIO

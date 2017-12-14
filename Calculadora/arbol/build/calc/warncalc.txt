@@ -1,0 +1,20 @@
+missing module named resource - imported by posix, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named posix - imported by os, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named _posixsubprocess - imported by subprocess, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named readline - imported by cmd, code, pdb, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named _winreg - imported by platform, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named 'java.lang' - imported by platform, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named termios - imported by tty, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py, getpass
+missing module named grp - imported by shutil, tarfile, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named _dummy_threading - imported by dummy_threading, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named 'org.python' - imported by copy, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py, xml.sax
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py, netrc, getpass
+missing module named org - imported by pickle, E:\PROYECTO FINAL Gabriel Soto\Calculadora\arbol\calc.py
+missing module named cPickle - imported by ply.yacc
+missing module named cStringIO - imported by cPickle
+missing module named copy_reg - imported by cPickle, cStringIO

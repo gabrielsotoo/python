@@ -45,7 +45,7 @@ def t_error(t):
     print("Caracteres ilegales!")
     t.lexer.skip(1)
     return t
-print("hola")
+print("Calculadora Elemental")
 
 lexer=lex.lex()
 

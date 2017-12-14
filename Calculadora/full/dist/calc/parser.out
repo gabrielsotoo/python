@@ -1,0 +1,325 @@
+Created by PLY version 3.10 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> calc
+Rule 1     calc -> expression
+Rule 2     calc -> var_assign
+Rule 3     calc -> empty
+Rule 4     var_assign -> NAME EQUALS expression
+Rule 5     expression -> expression MULTIPLICACION expression
+Rule 6     expression -> expression DIVISION expression
+Rule 7     expression -> expression SUMA expression
+Rule 8     expression -> expression RESTA expression
+Rule 9     expression -> INT
+Rule 10    expression -> FLOAT
+Rule 11    expression -> NAME
+Rule 12    empty -> <empty>
+
+Terminals, with rules where they appear
+
+DIVISION             : 6
+EQUALS               : 4
+FLOAT                : 10
+INT                  : 9
+MULTIPLICACION       : 5
+NAME                 : 4 11
+RESTA                : 8
+SUMA                 : 7
+error                : 
+
+Nonterminals, with rules where they appear
+
+calc                 : 0
+empty                : 3
+expression           : 1 4 5 5 6 6 7 7 8 8
+var_assign           : 2
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . calc
+    (1) calc -> . expression
+    (2) calc -> . var_assign
+    (3) calc -> . empty
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+    (4) var_assign -> . NAME EQUALS expression
+    (12) empty -> .
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 7
+    $end            reduce using rule 12 (empty -> .)
+
+    calc                           shift and go to state 1
+    expression                     shift and go to state 2
+    var_assign                     shift and go to state 3
+    empty                          shift and go to state 4
+
+state 1
+
+    (0) S' -> calc .
+
+
+
+state 2
+
+    (1) calc -> expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    $end            reduce using rule 1 (calc -> expression .)
+    MULTIPLICACION  shift and go to state 8
+    DIVISION        shift and go to state 9
+    SUMA            shift and go to state 10
+    RESTA           shift and go to state 11
+
+
+state 3
+
+    (2) calc -> var_assign .
+
+    $end            reduce using rule 2 (calc -> var_assign .)
+
+
+state 4
+
+    (3) calc -> empty .
+
+    $end            reduce using rule 3 (calc -> empty .)
+
+
+state 5
+
+    (9) expression -> INT .
+
+    MULTIPLICACION  reduce using rule 9 (expression -> INT .)
+    DIVISION        reduce using rule 9 (expression -> INT .)
+    SUMA            reduce using rule 9 (expression -> INT .)
+    RESTA           reduce using rule 9 (expression -> INT .)
+    $end            reduce using rule 9 (expression -> INT .)
+
+
+state 6
+
+    (10) expression -> FLOAT .
+
+    MULTIPLICACION  reduce using rule 10 (expression -> FLOAT .)
+    DIVISION        reduce using rule 10 (expression -> FLOAT .)
+    SUMA            reduce using rule 10 (expression -> FLOAT .)
+    RESTA           reduce using rule 10 (expression -> FLOAT .)
+    $end            reduce using rule 10 (expression -> FLOAT .)
+
+
+state 7
+
+    (11) expression -> NAME .
+    (4) var_assign -> NAME . EQUALS expression
+
+    MULTIPLICACION  reduce using rule 11 (expression -> NAME .)
+    DIVISION        reduce using rule 11 (expression -> NAME .)
+    SUMA            reduce using rule 11 (expression -> NAME .)
+    RESTA           reduce using rule 11 (expression -> NAME .)
+    $end            reduce using rule 11 (expression -> NAME .)
+    EQUALS          shift and go to state 12
+
+
+state 8
+
+    (5) expression -> expression MULTIPLICACION . expression
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 14
+
+    expression                     shift and go to state 13
+
+state 9
+
+    (6) expression -> expression DIVISION . expression
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 14
+
+    expression                     shift and go to state 15
+
+state 10
+
+    (7) expression -> expression SUMA . expression
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 14
+
+    expression                     shift and go to state 16
+
+state 11
+
+    (8) expression -> expression RESTA . expression
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 14
+
+    expression                     shift and go to state 17
+
+state 12
+
+    (4) var_assign -> NAME EQUALS . expression
+    (5) expression -> . expression MULTIPLICACION expression
+    (6) expression -> . expression DIVISION expression
+    (7) expression -> . expression SUMA expression
+    (8) expression -> . expression RESTA expression
+    (9) expression -> . INT
+    (10) expression -> . FLOAT
+    (11) expression -> . NAME
+
+    INT             shift and go to state 5
+    FLOAT           shift and go to state 6
+    NAME            shift and go to state 14
+
+    expression                     shift and go to state 18
+
+state 13
+
+    (5) expression -> expression MULTIPLICACION expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    MULTIPLICACION  reduce using rule 5 (expression -> expression MULTIPLICACION expression .)
+    DIVISION        reduce using rule 5 (expression -> expression MULTIPLICACION expression .)
+    SUMA            reduce using rule 5 (expression -> expression MULTIPLICACION expression .)
+    RESTA           reduce using rule 5 (expression -> expression MULTIPLICACION expression .)
+    $end            reduce using rule 5 (expression -> expression MULTIPLICACION expression .)
+
+  ! MULTIPLICACION  [ shift and go to state 8 ]
+  ! DIVISION        [ shift and go to state 9 ]
+  ! SUMA            [ shift and go to state 10 ]
+  ! RESTA           [ shift and go to state 11 ]
+
+
+state 14
+
+    (11) expression -> NAME .
+
+    MULTIPLICACION  reduce using rule 11 (expression -> NAME .)
+    DIVISION        reduce using rule 11 (expression -> NAME .)
+    SUMA            reduce using rule 11 (expression -> NAME .)
+    RESTA           reduce using rule 11 (expression -> NAME .)
+    $end            reduce using rule 11 (expression -> NAME .)
+
+
+state 15
+
+    (6) expression -> expression DIVISION expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    MULTIPLICACION  reduce using rule 6 (expression -> expression DIVISION expression .)
+    DIVISION        reduce using rule 6 (expression -> expression DIVISION expression .)
+    SUMA            reduce using rule 6 (expression -> expression DIVISION expression .)
+    RESTA           reduce using rule 6 (expression -> expression DIVISION expression .)
+    $end            reduce using rule 6 (expression -> expression DIVISION expression .)
+
+  ! MULTIPLICACION  [ shift and go to state 8 ]
+  ! DIVISION        [ shift and go to state 9 ]
+  ! SUMA            [ shift and go to state 10 ]
+  ! RESTA           [ shift and go to state 11 ]
+
+
+state 16
+
+    (7) expression -> expression SUMA expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    SUMA            reduce using rule 7 (expression -> expression SUMA expression .)
+    RESTA           reduce using rule 7 (expression -> expression SUMA expression .)
+    $end            reduce using rule 7 (expression -> expression SUMA expression .)
+    MULTIPLICACION  shift and go to state 8
+    DIVISION        shift and go to state 9
+
+  ! MULTIPLICACION  [ reduce using rule 7 (expression -> expression SUMA expression .) ]
+  ! DIVISION        [ reduce using rule 7 (expression -> expression SUMA expression .) ]
+  ! SUMA            [ shift and go to state 10 ]
+  ! RESTA           [ shift and go to state 11 ]
+
+
+state 17
+
+    (8) expression -> expression RESTA expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    SUMA            reduce using rule 8 (expression -> expression RESTA expression .)
+    RESTA           reduce using rule 8 (expression -> expression RESTA expression .)
+    $end            reduce using rule 8 (expression -> expression RESTA expression .)
+    MULTIPLICACION  shift and go to state 8
+    DIVISION        shift and go to state 9
+
+  ! MULTIPLICACION  [ reduce using rule 8 (expression -> expression RESTA expression .) ]
+  ! DIVISION        [ reduce using rule 8 (expression -> expression RESTA expression .) ]
+  ! SUMA            [ shift and go to state 10 ]
+  ! RESTA           [ shift and go to state 11 ]
+
+
+state 18
+
+    (4) var_assign -> NAME EQUALS expression .
+    (5) expression -> expression . MULTIPLICACION expression
+    (6) expression -> expression . DIVISION expression
+    (7) expression -> expression . SUMA expression
+    (8) expression -> expression . RESTA expression
+
+    $end            reduce using rule 4 (var_assign -> NAME EQUALS expression .)
+    MULTIPLICACION  shift and go to state 8
+    DIVISION        shift and go to state 9
+    SUMA            shift and go to state 10
+    RESTA           shift and go to state 11
+

@@ -1,0 +1,43 @@
+('E:\\PROYECTO FINAL Gabriel '
+ 'Soto\\Calculadora\\arbol\\build\\calc\\out00-PKG.pkg',
+ {'BINARY': 1,
+  'DATA': 1,
+  'EXECUTABLE': 1,
+  'EXTENSION': 1,
+  'PYMODULE': 1,
+  'PYSOURCE': 1,
+  'PYZ': 0},
+ [('out00-PYZ.pyz',
+   'E:\\PROYECTO FINAL Gabriel '
+   'Soto\\Calculadora\\arbol\\build\\calc\\out00-PYZ.pyz',
+   'PYZ'),
+  ('struct',
+   'E:\\PROYECTO FINAL Gabriel '
+   'Soto\\Calculadora\\arbol\\build\\calc\\localpycos\\struct.pyo',
+   'PYMODULE'),
+  ('pyimod01_os_path',
+   'c:\\program files '
+   '(x86)\\python36-32\\lib\\site-packages\\PyInstaller\\loader\\pyimod01_os_path.pyc',
+   'PYMODULE'),
+  ('pyimod02_archive',
+   'c:\\program files '
+   '(x86)\\python36-32\\lib\\site-packages\\PyInstaller\\loader\\pyimod02_archive.pyc',
+   'PYMODULE'),
+  ('pyimod03_importers',
+   'c:\\program files '
+   '(x86)\\python36-32\\lib\\site-packages\\PyInstaller\\loader\\pyimod03_importers.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'c:\\program files '
+   '(x86)\\python36-32\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('calc',
+   'E:\\PROYECTO FINAL Gabriel Soto\\Calculadora\\arbol\\calc.py',
+   'PYSOURCE'),
+  ('calc.exe.manifest',
+   'E:\\PROYECTO FINAL Gabriel '
+   'Soto\\Calculadora\\arbol\\build\\calc\\calc.exe.manifest',
+   'BINARY')],
+ True,
+ False,
+ False)
