@@ -1,0 +1,1 @@
+Este directorio es para el proyecto de la calculadora elemental creada en Python utilizando la libreria PLY. Aqui se utilizan los analizadores lexicos, sintacticos y semanticos para realizar el trabajo de la evaluación de una expresión.
